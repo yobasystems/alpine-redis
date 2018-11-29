@@ -1,6 +1,6 @@
 # Nginx Docker image running on Alpine Linux
 
-[![Docker Layers](https://img.shields.io/badge/docker%20layers-4-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Size](https://img.shields.io/badge/docker%20size-6.6%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-redis.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/)
+[![Docker Layers](https://img.shields.io/badge/docker%20layers-17-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Size](https://img.shields.io/badge/docker%20size-15%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-redis.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 
 [![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.8.1-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Redis Version](https://img.shields.io/badge/redis%20version-v5.0.2-green.svg?maxAge=2592000?style=flat-square)](https://redis.io/)
 
@@ -22,7 +22,7 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 ## Features
 
   * Minimal size only
-  * ?? MB and only ? layers
+  * 15 MB and only 17 layers
   * Memory usage is minimal on a simple install
 
 
