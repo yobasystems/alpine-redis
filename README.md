@@ -2,7 +2,7 @@
 
 [![Docker Layers](https://img.shields.io/badge/docker%20layers-4-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Size](https://img.shields.io/badge/docker%20size-6.6%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-redis.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 
-[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.8.1-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Redis Version](https://img.shields.io/badge/nginx%20version-v5.0.2-green.svg?maxAge=2592000?style=flat-square)](https://redis.io/)
+[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.8.1-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Redis Version](https://img.shields.io/badge/redis%20version-v5.0.2-green.svg?maxAge=2592000?style=flat-square)](https://redis.io/)
 
 
 
