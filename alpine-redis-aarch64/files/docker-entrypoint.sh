@@ -10,4 +10,9 @@ if [ "$1" = 'redis-server' -a "$(id -u)" = '0' ]; then
 	exec su-exec redis "$0" "$@"
 fi
 
+um="$(umask)"
+if [ "$um" = '0022' ]; then
+	umask 0077
+fi
+
 exec "$@"
