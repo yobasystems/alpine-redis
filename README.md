@@ -11,7 +11,7 @@
 
 This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 7.2.1 of [Redis](https://redis.io/)
 
-##### Alpine Version 3.18.3 (Released September 11, 2018)
+### Alpine Version 3.18.3 (Released 2023-08-07)
 ##### Redis Version 7.2.1
 
 ----
