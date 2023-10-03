@@ -1,4 +1,4 @@
-FROM yobasystems/alpine:3.18.3-amd64
+FROM yobasystems/alpine:3.18.4-amd64
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -6,7 +6,7 @@ ARG VCS_REF
 LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="amd64/x86_64" \
     redis-version="7.2.1" \
-    alpine-version="3.18.3" \
+    alpine-version="3.18.4" \
     build="03-Oct-2023" \
     org.opencontainers.image.title="alpine-redis" \
     org.opencontainers.image.description="Redis container image running on Alpine Linux" \
