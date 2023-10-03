@@ -1,49 +1,79 @@
-# Nginx Docker image running on Alpine Linux
+# Redis container image running on Alpine Linux
 
-[![Docker Layers](https://img.shields.io/badge/docker%20layers-17-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Size](https://img.shields.io/badge/docker%20size-15%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-redis.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-redis/)
+[![Docker Automated build](https://img.shields.io/docker/automated/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
+[![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 
-[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.8.1-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Redis Version](https://img.shields.io/badge/redis%20version-v5.0.2-green.svg?maxAge=2592000?style=flat-square)](https://redis.io/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.18.3-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
+[![Redis Version](https://img.shields.io/badge/redis%20version-v7.2.1-green.svg?maxAge=2592000?style=flat-square)](https://redis.io/)
 
 
 
-This Docker image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 5.0.2 of [Redis](https://redis.io/)
+This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 7.2.1 of [Redis](https://redis.io/)
 
-##### Alpine Version 3.8.1 (Released September 11, 2018)
-##### Redis Version 5.0.2
+##### Alpine Version 3.18.3 (Released September 11, 2018)
+##### Redis Version 7.2.1
 
 ----
 
-## What is Alpine Linux?
-Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with Docker images.
+## Table of Contents
+
+- [What is Alpine Linux?](#what-is-alpine-linux)
+- [Features](#features)
+- [Architectures](#architectures)
+- [Tags](#tags)
+- [Layers & Sizes](#layers--sizes)
+- [How to use this image](#how-to-use-this-image)
+- [Image contents & Vulnerability analysis](#image-contents--vulnerability-analysis)
+- [Source Repositories](#source-repositories)
+- [Container Registries](#container-registries)
+- [Links](#links)
+- [Donation](#donation)
+
+
+## 🏔️ What is Alpine Linux?
+Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with container images.
 
 ## What is Redis?
 Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.
 
-## Features
+## ✨ Features
 
-  * Minimal size only
-  * 15 MB and only 17 layers
-  * Memory usage is minimal on a simple install
+* Minimal size only, minimal layers
+* Memory usage is minimal on a simple install.
 
+## 🏗️ Architectures
 
-## Architectures
-
-* ```:amd64```, ```:latest``` - 64 bit Intel/AMD (x86_64/amd64)
-* ```:i386```, ```:x86``` - 32 bit Intel/AMD (x86/i686)
+* ```:amd64```, ```:x86_64``` - 64 bit Intel/AMD (x86_64/amd64)
 * ```:arm64v8```, ```:aarch64``` - 64 bit ARM (ARMv8/aarch64)
 * ```:arm32v7```, ```:armhf``` - 32 bit ARM (ARMv7/armhf)
 
-#### PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
+#### 📝 PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
 
-## Tags
+## 🏷️ Tags
 
-* ```:latest```, ```:amd64``` latest branch based on amd64
+* ```:latest``` latest branch based (Automatic Architecture Selection)
 * ```:master``` master branch usually inline with latest
-* ```:v0.0.0``` version number related to docker version
-* ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm architecture
+* ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
 * ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
+* ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm32 architecture
+
+## 📏 Layers & Sizes
+
+![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-redis/amd64.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-redis/amd64.svg?style=for-the-badge)
+
+![Version](https://img.shields.io/badge/version-aarch64-blue.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-redis/aarch64.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-redis/aarch64.svg?style=for-the-badge)
+
+![Version](https://img.shields.io/badge/version-armhf-blue.svg?style=for-the-badge)
+![MicroBadger Layers (tag)](https://img.shields.io/docker/layers/yobasystems/alpine-redis/armhf.svg?style=for-the-badge)
+![MicroBadger Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-redis/armhf.svg?style=for-the-badge)
 
 
+## 🚀 How to use this image
 ## Environment Variables:
 
 ## Creating an instance
@@ -74,16 +104,43 @@ redis:
   restart: always
 ```
 
-## Source Repository
+## 🔍 Image contents & Vulnerability analysis
 
-* [Bitbucket - yobasystems/alpine-redis](https://bitbucket.org/yobasystems/alpine-redis/)
+| PACKAGE NAME          | PACKAGE VERSION | VULNERABILITIES |
+|-----------------------|-----------------|-----------------|
+
+
+## 📚 Source Repositories
 
 * [Github - yobasystems/alpine-redis](https://github.com/yobasystems/alpine-redis)
 
-## Links
+* [Gitlab - yobasystems/alpine-redis](https://gitlab.com/yobasystems/alpine-redis)
+
+* [Bitbucket - yobasystems/alpine-redis](https://bitbucket.org/yobasystems/alpine-redis/)
+
+
+## 🐳 Container Registries
+
+* [Dockerhub - yobasystems/alpine-redis](https://hub.docker.com/r/yobasystems/alpine-redis/)
+
+* [Quay.io - yobasystems/alpine-redis](https://quay.io/repository/yobasystems/alpine-redis)
+
+## 🔗 Links
 
 * [Yoba Systems](https://www.yobasystems.co.uk/)
 
-* [Dockerhub - yobasystems](https://hub.docker.com/u/yobasystems/)
+* [Github - Yoba Systems](https://github.com/yobasystems/)
 
-* [Quay.io - yobasystems](https://quay.io/organization/yobasystems)
+* [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
+
+* [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
+
+* [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
+
+## 💰 Donation
+
+[![BMAC](https://img.shields.io/badge/BUY%20ME%20A%20COFFEE-£5-blue.svg?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/dominictayloruk?new=1)
+
+[![BITCOIN](https://img.shields.io/badge/BTC-bc1q7hy8qmyvq7rw6slrna7yffcdnj9rcg4e9xjecc-blue.svg?style=for-the-badge&logo=bitcoin)](bitcoin:bc1q7hy8qmyvq7rw6slrna7yffcdnj9rcg4e9xjecc)
+
+[![ETHEREUM](https://img.shields.io/badge/ETH-0xb6bE2e4da3d86b50Bdae1F9B6960c23dd87C532C-blue.svg?style=for-the-badge&logo=ethereum)](ethereum:0xb6bE2e4da3d86b50Bdae1F9B6960c23dd87C532C)

@@ -1,18 +1,35 @@
-FROM yobasystems/alpine:3.8.1-amd64
-LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="AMD64/x86_64" version="5.0.2" alpineversion="3.8.1" build="29-nov-2018"
+FROM yobasystems/alpine:3.18.3-amd64
+
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
+    architecture="amd64/x86_64" \
+    redis-version="7.2.1" \
+    alpine-version="3.18.3" \
+    build="03-Oct-2023" \
+    org.opencontainers.image.title="alpine-redis" \
+    org.opencontainers.image.description="Redis container image running on Alpine Linux" \
+    org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
+    org.opencontainers.image.vendor="Yoba Systems" \
+    org.opencontainers.image.version="v7.2.1" \
+    org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-redis/" \
+    org.opencontainers.image.source="https://github.com/yobasystems/alpine-redis" \
+    org.opencontainers.image.revision=$VCS_REF \
+    org.opencontainers.image.created=$BUILD_DATE
 
 RUN addgroup -S redis && adduser -S -G redis redis
 
 RUN apk add --no-cache su-exec tzdata
 
-ENV REDIS_VERSION 5.0.2
-ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-5.0.2.tar.gz
-ENV REDIS_DOWNLOAD_SHA 937dde6164001c083e87316aa20dad2f8542af089dfcb1cbb64f9c8300cd00ed
+ENV REDIS_VERSION 7.2.1
+ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-7.2.1.tar.gz
+ENV REDIS_DOWNLOAD_SHA 5c76d990a1b1c5f949bcd1eed90d0c8a4f70369bdbdcb40288c561ddf88967a4
 
 RUN set -ex; \
 	\
 	apk add --no-cache --virtual .build-deps \
-	coreutils gcc jemalloc-dev linux-headers make musl-dev ; \
+	coreutils dpkg-dev dpkg gcc jemalloc-dev linux-headers make musl-dev openssl-dev wget ; \
 	\
 	wget -O redis.tar.gz "$REDIS_DOWNLOAD_URL"; \
 	echo "$REDIS_DOWNLOAD_SHA *redis.tar.gz" | sha256sum -c -; \
