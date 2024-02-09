@@ -5,14 +5,14 @@
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 
 [![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.19.0-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
-[![Redis Version](https://img.shields.io/badge/redis%20version-v7.2.3-green.svg?style=for-the-badge&logo=redis)](https://redis.io/)
+[![Redis Version](https://img.shields.io/badge/redis%20version-v7.2.4-green.svg?style=for-the-badge&logo=redis)](https://redis.io/)
 
 
 
-This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 7.2.3 of [Redis](https://redis.io/)
+This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 7.2.4 of [Redis](https://redis.io/)
 
 ### Alpine Version 3.19.0 (Released 2023-12-07)
-##### Redis Version 7.2.3
+##### Redis Version 7.2.4
 
 ----
 
