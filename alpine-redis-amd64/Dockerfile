@@ -7,14 +7,14 @@ LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="amd64/x86_64" \
     redis-version="7.2.4" \
     alpine-version="3.19.0" \
-    build="09-Feb-2024" \
+    build="11-Feb-2024" \
     org.opencontainers.image.title="alpine-redis" \
     org.opencontainers.image.description="Redis container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.vendor="Yoba Systems" \
     org.opencontainers.image.version="v7.2.4" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-redis/" \
-    org.opencontainers.image.source="https://github.com/yobasystems/alpine-redis" \
+    org.opencontainers.image.source="https://github.com/yobasystems/alpine" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
