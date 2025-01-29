@@ -53,7 +53,7 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 ## 🏷️ Tags
 
 * ```:latest``` latest branch based (Automatic Architecture Selection)
-* ```:master``` master branch usually inline with latest
+* ```:main``` main branch usually inline with latest
 * ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
 * ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
 * ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm32 architecture
