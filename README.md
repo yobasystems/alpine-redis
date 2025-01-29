@@ -4,15 +4,15 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.20.2-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
-[![Redis Version](https://img.shields.io/badge/redis%20version-v7.2.5-green.svg?style=for-the-badge&logo=redis)](https://redis.io/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.21.1-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
+[![Redis Version](https://img.shields.io/badge/redis%20version-v7.4.2-green.svg?style=for-the-badge&logo=redis)](https://redis.io/)
 
 
 
-This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 7.2.5 of [Redis](https://redis.io/)
+This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 7.4.2 of [Redis](https://redis.io/)
 
-### Alpine Version 3.20.2 (Released 2024-07-22)
-##### Redis Version 7.2.5
+### Alpine Version 3.21.1 (Released 2025-01-06)
+##### Redis Version 7.4.2
 
 ----
 
@@ -113,28 +113,24 @@ redis:
 ## 📚 Source Repositories
 
 * [Github - yobasystems/alpine-redis](https://github.com/yobasystems/alpine-redis)
-
 * [Gitlab - yobasystems/alpine-redis](https://gitlab.com/yobasystems/alpine-redis)
-
 * [Bitbucket - yobasystems/alpine-redis](https://bitbucket.org/yobasystems/alpine-redis/)
 
 
 ## 🐳 Container Registries
 
 * [Dockerhub - yobasystems/alpine-redis](https://hub.docker.com/r/yobasystems/alpine-redis/)
-
 * [Quay.io - yobasystems/alpine-redis](https://quay.io/repository/yobasystems/alpine-redis)
+* [GHCR - yobasystems/alpine-redis](https://ghcr.io/yobasystems/alpine-redis)
+
 
 ## 🔗 Links
 
-* [Yoba Systems](https://www.yobasystems.co.uk/)
-
+* [Yoba Systems](https://yoba.systems/)
 * [Github - Yoba Systems](https://github.com/yobasystems/)
-
 * [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
-
 * [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
-
+* [GHCR - Yoba Systems](https://ghcr.io/yobasystems)
 * [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
 
 ## 💰 Donation
