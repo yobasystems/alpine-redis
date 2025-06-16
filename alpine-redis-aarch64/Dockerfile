@@ -25,7 +25,7 @@ RUN apk add --no-cache su-exec tzdata
 
 ENV REDIS_VERSION 8.0.2
 ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-8.0.2.tar.gz
-ENV REDIS_DOWNLOAD_SHA caf3c0069f06fc84c5153bd2a348b204c578de80490c73857bee01d9b5d7401f
+ENV REDIS_DOWNLOAD_SHA e9296b67b54c91befbcca046d67071c780a1f7c9f9e1ae5ed94773c3bb9b542f
 
 RUN set -ex; \
 	\
