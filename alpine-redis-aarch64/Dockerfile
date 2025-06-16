@@ -23,27 +23,38 @@ RUN addgroup -S redis && adduser -S -G redis redis
 
 RUN apk add --no-cache su-exec tzdata
 
-ENV REDIS_VERSION 8.0.2
-ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-8.0.2.tar.gz
-ENV REDIS_DOWNLOAD_SHA e9296b67b54c91befbcca046d67071c780a1f7c9f9e1ae5ed94773c3bb9b542f
+ENV REDIS_VERSION=8.0.2
+ENV REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-8.0.2.tar.gz
+ENV REDIS_DOWNLOAD_SHA=e9296b67b54c91befbcca046d67071c780a1f7c9f9e1ae5ed94773c3bb9b542f
 
 RUN set -ex; \
-	\
 	apk add --no-cache --virtual .build-deps \
-	coreutils dpkg-dev dpkg gcc jemalloc-dev linux-headers make musl-dev openssl-dev wget ; \
-	\
+	coreutils gcc g++ jemalloc-dev linux-headers make musl-dev openssl-dev wget pkgconf ; \
 	wget -O redis.tar.gz "$REDIS_DOWNLOAD_URL"; \
+	echo "VERIFYING CHECKSUM:"; \
 	echo "$REDIS_DOWNLOAD_SHA *redis.tar.gz" | sha256sum -c -; \
+	echo "CREATING DIRECTORY /usr/src/redis:"; \
 	mkdir -p /usr/src/redis; \
+	echo "EXTRACTING TARBALL:"; \
+	tar -tvzf redis.tar.gz > /tmp/tar_contents.txt; \
+	echo "TARBALL CONTENTS (first 20 lines of /tmp/tar_contents.txt):"; \
+	head -n 20 /tmp/tar_contents.txt; \
 	tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1; \
-	rm redis.tar.gz; \
-	grep -E '^ *createBoolConfig[(]"protected-mode",.*, *1 *,.*[)],$' /usr/src/redis/src/config.c; \
-	sed -ri 's!^( *createBoolConfig[(]"protected-mode",.*, *)1( *,.*[)],)$!\10\2!' /usr/src/redis/src/config.c; \
-	grep -E '^ *createBoolConfig[(]"protected-mode",.*, *0 *,.*[)],$' /usr/src/redis/src/config.c; \
+	echo "LISTING /usr/src/redis AFTER EXTRACTION:"; \
+	ls -lR /usr/src/redis; \
+	echo "CHECKING SPECIFICALLY FOR /usr/src/redis/src/config.c:"; \
+	ls -l /usr/src/redis/src/config.c; \
+	echo "ATTEMPTING GREP (if the file exists, this should find the line or exit 1, not 2):"; \
+	grep -E '^ *createBoolConfig[(]\"protected-mode\",.*, *1 *,.*[)],$' /usr/src/redis/src/config.c || echo "GREP FAILED OR NO MATCH (exit code $?)" ; \
+	echo "ATTEMPTING SED (original line):"; \
+	sed -ri 's!^( *createBoolConfig[(]\"protected-mode\",.*, *)1( *,.*[)],)$!\10\2!' /usr/src/redis/src/config.c; \
+	echo "VERIFYING SED (should now be 0):"; \
+	grep -E '^ *createBoolConfig[(]\"protected-mode\",.*, *0 *,.*[)],$' /usr/src/redis/src/config.c || echo "GREP AFTER SED FAILED OR NO MATCH (exit code $?)" ; \
 	export BUILD_TLS=yes; \
-	make -C /usr/src/redis -j "$(nproc)"; \
-	make -C /usr/src/redis install; \
+	make -C /usr/src/redis MALLOC=jemalloc -j "$(nproc)"; \
+	make -C /usr/src/redis MALLOC=jemalloc install; \
 	rm -r /usr/src/redis; \
+	rm redis.tar.gz; \
 	runDeps="$( \
 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local \
 			| tr ',' '\n' \
