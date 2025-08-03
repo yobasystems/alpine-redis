@@ -1,21 +1,21 @@
-FROM yobasystems/alpine:3.22.0-amd64
+FROM yobasystems/alpine:3.22.1-amd64
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="amd64/x86_64" \
-    redis-version="8.0.2" \
-    alpine-version="3.22.0" \
-    build="16-Jun-2025" \
+    redis-version="8.0.3" \
+    alpine-version="3.22.1" \
+    build="03-Aug-2025" \
     org.opencontainers.image.title="alpine-redis" \
     org.opencontainers.image.description="Redis container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="8.0.2" \
+    org.opencontainers.image.version="8.0.3" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-redis/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-redis" \
-    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.22.0" \
+    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.22.1" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
@@ -23,9 +23,9 @@ RUN addgroup -S redis && adduser -S -G redis redis
 
 RUN apk add --no-cache su-exec tzdata
 
-ENV REDIS_VERSION=8.0.2
-ENV REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-8.0.2.tar.gz
-ENV REDIS_DOWNLOAD_SHA=e9296b67b54c91befbcca046d67071c780a1f7c9f9e1ae5ed94773c3bb9b542f
+ENV REDIS_VERSION=8.0.3
+ENV REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-8.0.3.tar.gz
+ENV REDIS_DOWNLOAD_SHA=33f37290b00b14e9a884dd4dcba335febd63ea16c51609d34fa41e031ad587df
 
 RUN set -ex; \
 	apk add --no-cache --virtual .build-deps \
