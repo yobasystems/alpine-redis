@@ -4,15 +4,15 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.1-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
-[![Redis Version](https://img.shields.io/badge/redis%20version-v8.0.3-green.svg?style=for-the-badge&logo=redis)](https://redis.io/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.2-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
+[![Redis Version](https://img.shields.io/badge/redis%20version-v8.4.0-green.svg?style=for-the-badge&logo=redis)](https://redis.io/)
 
 
 
-This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 8.0.3 of [Redis](https://redis.io/)
+This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 8.4.0 of [Redis](https://redis.io/)
 
-### Alpine Version 3.22.1 (Released 2025-07-15)
-##### Redis Version 8.0.3
+### Alpine Version 3.22.2 (Released 2025-10-08)
+##### Redis Version 8.4.0
 
 ----
 
@@ -61,15 +61,12 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 ## 📏 Layers & Sizes
 
 ![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![Docker Image Version (tag)](https://img.shields.io/docker/v/yobasystems/alpine-redis/amd64.svg?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-redis/amd64.svg?style=for-the-badge)
 
 ![Version](https://img.shields.io/badge/version-aarch64-blue.svg?style=for-the-badge)
-![Docker Image Version (tag)](https://img.shields.io/docker/v/yobasystems/alpine-redis/aarch64.svg?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-redis/aarch64.svg?style=for-the-badge)
 
 ![Version](https://img.shields.io/badge/version-armhf-blue.svg?style=for-the-badge)
-![Docker Image Version (tag)](https://img.shields.io/docker/v/yobasystems/alpine-redis/armhf.svg?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-redis/armhf.svg?style=for-the-badge)
 
 
@@ -114,7 +111,6 @@ redis:
 
 * [Github - yobasystems/alpine-redis](https://github.com/yobasystems/alpine-redis)
 * [Gitlab - yobasystems/alpine-redis](https://gitlab.com/yobasystems/alpine-redis)
-* [Bitbucket - yobasystems/alpine-redis](https://bitbucket.org/yobasystems/alpine-redis/)
 
 
 ## 🐳 Container Registries
