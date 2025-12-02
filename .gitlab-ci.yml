@@ -26,7 +26,7 @@ include:
     - echo "$CI_JOB_TOKEN" | docker login -u gitlab-ci-token "$CI_REGISTRY" --password-stdin
     - docker push ${CI_REGISTRY_IMAGE}/${CI_COMMIT_SHORT_SHA}:${ARCH}
 
-amd64 redis build:
+amd64_redis_build:
   <<: *build_definition
   tags:
     - amd64
@@ -34,7 +34,7 @@ amd64 redis build:
     ARCH: amd64
     PLATFORM: amd64
 
-arm32v7 redis build:
+arm32v7_redis_build:
   <<: *build_definition
   tags:
     - armhf
@@ -42,7 +42,7 @@ arm32v7 redis build:
     ARCH: armhf
     PLATFORM: arm/v7
 
-arm64v8 redis build:
+arm64v8_redis_build:
   <<: *build_definition
   tags:
     - aarch64
