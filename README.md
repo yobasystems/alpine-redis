@@ -87,7 +87,7 @@ docker run --name redis -p 6379:6379 -v /data/redis:/data yobasystems/alpine-red
 
 ## Docker Compose example:
 
-```yalm
+```yaml
 version: '2'
 services:
 redis:
