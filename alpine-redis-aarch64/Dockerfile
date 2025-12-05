@@ -1,23 +1,23 @@
-FROM yobasystems/alpine:3.22.2-aarch64
+FROM yobasystems/alpine:3.23.0-aarch64
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
-    architecture="arm64v8/aarch64" \
-    redis-version="8.4.0" \
-    alpine-version="3.22.2" \
-    build="30-Nov-2025" \
-    org.opencontainers.image.title="alpine-redis" \
-    org.opencontainers.image.description="Redis container image running on Alpine Linux" \
-    org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
-    org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="8.4.0" \
-    org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-redis/" \
-    org.opencontainers.image.source="https://github.com/yobasystems/alpine-redis" \
-    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.22.1" \
-    org.opencontainers.image.revision=$VCS_REF \
-    org.opencontainers.image.created=$BUILD_DATE
+	architecture="arm64v8/aarch64" \
+	redis-version="8.4.0" \
+	alpine-version="3.23.0" \
+	build="04-Dec-2025" \
+	org.opencontainers.image.title="alpine-redis" \
+	org.opencontainers.image.description="Redis container image running on Alpine Linux" \
+	org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
+	org.opencontainers.image.vendor="Yoba Systems" \
+	org.opencontainers.image.version="8.4.0" \
+	org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-redis/" \
+	org.opencontainers.image.source="https://github.com/yobasystems/alpine-redis" \
+	org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.22.1" \
+	org.opencontainers.image.revision=$VCS_REF \
+	org.opencontainers.image.created=$BUILD_DATE
 
 RUN addgroup -S redis && adduser -S -G redis redis
 
@@ -56,10 +56,10 @@ RUN set -ex; \
 	rm -r /usr/src/redis; \
 	rm redis.tar.gz; \
 	runDeps="$( \
-		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local \
-			| tr ',' '\n' \
-			| sort -u \
-			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
+	scanelf --needed --nobanner --format '%n#p' --recursive /usr/local \
+	| tr ',' '\n' \
+	| sort -u \
+	| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
 	)"; \
 	apk add --virtual .redis-rundeps $runDeps; \
 	apk del .build-deps; \

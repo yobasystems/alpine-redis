@@ -4,17 +4,16 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-redis.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-redis/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.2-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.23.0-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
 [![Redis Version](https://img.shields.io/badge/redis%20version-v8.4.0-green.svg?style=for-the-badge&logo=redis)](https://redis.io/)
-
-
 
 This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobasystems/alpine-redis/) is based on the minimal [Alpine Linux](http://alpinelinux.org/) with version 8.4.0 of [Redis](https://redis.io/)
 
-### Alpine Version 3.22.2 (Released 2025-10-08)
+### Alpine Version 3.23.0 (Released 2025-12-03)
+
 ##### Redis Version 8.4.0
 
-----
+---
 
 ## Table of Contents
 
@@ -30,33 +29,34 @@ This container image [(yobasystems/alpine-redis)](https://hub.docker.com/r/yobas
 - [Links](#links)
 - [Donation](#donation)
 
-
 ## 🏔️ What is Alpine Linux?
+
 Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with container images.
 
 ## What is Redis?
+
 Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.
 
 ## ✨ Features
 
-* Minimal size only, minimal layers
-* Memory usage is minimal on a simple install.
+- Minimal size only, minimal layers
+- Memory usage is minimal on a simple install.
 
 ## 🏗️ Architectures
 
-* ```:amd64```, ```:x86_64``` - 64 bit Intel/AMD (x86_64/amd64)
-* ```:arm64v8```, ```:aarch64``` - 64 bit ARM (ARMv8/aarch64)
-* ```:arm32v7```, ```:armhf``` - 32 bit ARM (ARMv7/armhf)
+- `:amd64`, `:x86_64` - 64 bit Intel/AMD (x86_64/amd64)
+- `:arm64v8`, `:aarch64` - 64 bit ARM (ARMv8/aarch64)
+- `:arm32v7`, `:armhf` - 32 bit ARM (ARMv7/armhf)
 
 #### 📝 PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
 
 ## 🏷️ Tags
 
-* ```:latest``` latest branch based (Automatic Architecture Selection)
-* ```:main``` main branch usually inline with latest
-* ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
-* ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
-* ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm32 architecture
+- `:latest` latest branch based (Automatic Architecture Selection)
+- `:main` main branch usually inline with latest
+- `:amd64`, `:x86_64` amd64 based on latest tag but amd64 architecture
+- `:aarch64`, `:arm64v8` Armv8 based on latest tag but arm64 architecture
+- `:armhf`, `:arm32v7` Armv7 based on latest tag but arm32 architecture
 
 ## 📏 Layers & Sizes
 
@@ -69,8 +69,8 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 ![Version](https://img.shields.io/badge/version-armhf-blue.svg?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-redis/armhf.svg?style=for-the-badge)
 
-
 ## 🚀 How to use this image
+
 ## Environment Variables:
 
 ## Creating an instance
@@ -103,28 +103,25 @@ redis:
 
 ## 🔍 Image contents & Vulnerability analysis
 
-| PACKAGE NAME          | PACKAGE VERSION | VULNERABILITIES |
-|-----------------------|-----------------|-----------------|
-
+| PACKAGE NAME | PACKAGE VERSION | VULNERABILITIES |
+| ------------ | --------------- | --------------- |
 
 ## 📚 Source Repositories
 
-* [Github - yobasystems/alpine-redis](https://github.com/yobasystems/alpine-redis)
-* [Gitlab - yobasystems/alpine-redis](https://gitlab.com/yobasystems/alpine-redis)
-
+- [Github - yobasystems/alpine-redis](https://github.com/yobasystems/alpine-redis)
+- [Gitlab - yobasystems/alpine-redis](https://gitlab.com/yobasystems/alpine-redis)
 
 ## 🐳 Container Registries
 
-* [Dockerhub - yobasystems/alpine-redis](https://hub.docker.com/r/yobasystems/alpine-redis/)
-* [Quay.io - yobasystems/alpine-redis](https://quay.io/repository/yobasystems/alpine-redis)
-* [GHCR - yobasystems/alpine-redis](https://ghcr.io/yobasystems/alpine-redis)
-
+- [Dockerhub - yobasystems/alpine-redis](https://hub.docker.com/r/yobasystems/alpine-redis/)
+- [Quay.io - yobasystems/alpine-redis](https://quay.io/repository/yobasystems/alpine-redis)
+- [GHCR - yobasystems/alpine-redis](https://ghcr.io/yobasystems/alpine-redis)
 
 ## 🔗 Links
 
-* [Yoba Systems](https://yoba.systems/)
-* [Github - Yoba Systems](https://github.com/yobasystems/)
-* [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
-* [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
-* [GHCR - Yoba Systems](https://ghcr.io/yobasystems)
-* [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
+- [Yoba Systems](https://yoba.systems/)
+- [Github - Yoba Systems](https://github.com/yobasystems/)
+- [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
+- [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
+- [GHCR - Yoba Systems](https://ghcr.io/yobasystems)
+- [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
