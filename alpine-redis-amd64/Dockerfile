@@ -70,7 +70,8 @@ VOLUME /data
 WORKDIR /data
 
 COPY files/docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT ["docker-entrypoint.sh"]
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
 EXPOSE 6379
 CMD ["redis-server"]
